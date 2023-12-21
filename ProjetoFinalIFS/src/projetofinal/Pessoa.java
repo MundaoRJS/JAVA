@@ -1,6 +1,6 @@
 package projetofinal;
 import java.util.ArrayList;
-public abstract class Pessoa implements Funcionalidades {
+public abstract class Pessoa  {
 	private int codId;
 	private String nome;
 	

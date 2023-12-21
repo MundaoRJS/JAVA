@@ -70,13 +70,5 @@ public class Usuarios extends Pessoa {
 					"dias de emprestimo"	);
 			break;		
 		}
-	}
-
-	@Override
-	public void emprestimoLivro() {
-		// TODO Auto-generated method stub
-		
-	}
-
-		
+	}			
 }
