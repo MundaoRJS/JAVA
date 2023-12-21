@@ -8,6 +8,14 @@ public class Usuarios extends Pessoa {
 	
 	
 	
+	public Usuarios(int codId, String tipoUsuario, String nome) {
+		this.setCodId(codId);
+		this.setTipoUsuario(tipoUsuario);
+		this.setNome(nome);
+		this.getSigla();
+		this.getTempoEmprestimo();
+	}
+
 	public void cadastroUsuario() {
 		Scanner cad = new Scanner(System.in);
 		this.setCodId(cad.nextInt());
@@ -22,16 +30,16 @@ public class Usuarios extends Pessoa {
 	}
 
 	public void setSigla(String sigla) {
-		
-		if (getTipoUsuario().equals("aluno")) {
-			sigla = "alu";
-		}else if (this.getTipoUsuario().equals("Aluno de pós-graduação")){
-			sigla = "pos";
+		//this.sigla = sigla;
+		if (getTipoUsuario()=="Aluno") {
+			this.sigla = "alu";
+		}else if (this.getTipoUsuario().equalsIgnoreCase("Aluno pós graduação")){
+			this.sigla = "pos";
 			
-		}else if (this.getTipoUsuario().equals("Técnico Administrativo")) {
-			sigla = "tec";
+		}else if (this.getTipoUsuario().equalsIgnoreCase("Técnico Administrativo")) {
+			this.sigla = "tec";
 		}else {
-			sigla = "pro";
+			this.sigla = "pro";
 		}
 	}
 
@@ -50,22 +58,22 @@ public class Usuarios extends Pessoa {
 	public void setTempoEmprestimo(int tempoEmprestimo) {
 		switch (getSigla()){
 		case  "alu":
-			this.setTempoEmprestimo(5);
+			this.tempoEmprestimo=5;
 			System.out.println("O"+this.getTipoUsuario()+ this.getNome()+" possui "+ this.getTempoEmprestimo()+
 				"dias de emprestimo"	);
 			break;
 		case "pos":
-			this.setTempoEmprestimo(10);
+			this.tempoEmprestimo=10;
 			System.out.println("O"+this.getTipoUsuario()+ this.getNome()+" possui "+ this.getTempoEmprestimo()+
 					"dias de emprestimo"	);
 			break;
 		case "tec":
-			this.setTempoEmprestimo(14);
+			this.tempoEmprestimo=14;
 			System.out.println("O"+this.getTipoUsuario()+ this.getNome()+" possui "+ this.getTempoEmprestimo()+
 					"dias de emprestimo"	);
 			break;
 		case "pro":
-			this.setTempoEmprestimo(21);
+			this.tempoEmprestimo=21;
 			System.out.println("O"+this.getTipoUsuario()+ this.getNome()+" possui "+ this.getTempoEmprestimo()+
 					"dias de emprestimo"	);
 			break;		

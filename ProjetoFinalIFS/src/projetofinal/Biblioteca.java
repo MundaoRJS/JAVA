@@ -3,39 +3,35 @@ package projetofinal;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Biblioteca extends Usuarios{
+public class Biblioteca {
 
 	public static void main(String[] args) {
 		
-		Scanner ent = new Scanner(System.in);
-		String cad = ent.next();
+		//Scanner ent = new Scanner(System.in);
+		//String cad = ent.next();
 		//String[] cads = cad.split("/");
 		//ystem.out.println(cads[1]);
 		
-		ArrayList<String> nomes= new ArrayList<String>();		
-		nomes.add("Goku");
-		nomes.add("Claudio");
-		nomes.add("Gok");
-		nomes.add("Clau");
-		nomes.add("Go");
+		ArrayList<Usuarios> nomes= new ArrayList<Usuarios>();		
+		nomes.add(new Usuarios(123,"Aluno", "Alan lucas"));
+		nomes.add(new Usuarios(456,"Técnico Administrativo", "Telma Alves"));
+		nomes.add(new Usuarios(789,"Aluno pós graduação", "Ana luiza"));
+		nomes.add(new Usuarios(100,"Professor", "Paulo Pereira"));
 		
 		
-		for (int aito = 0 ; aito < nomes.size(); aito ++) {
-			System.out.println(nomes.get(aito));
+		
+		for (Usuarios  usuario : nomes) {
+			 System.out.println("ID: " + usuario.getCodId());
+			    System.out.println("Tipo de Usuário: " + usuario.getTipoUsuario());
+			    System.out.println("Nome: " + usuario.getNome());
+			    System.out.println("Sigla: " + usuario.getSigla());
+			    System.out.println("Tempo de Empréstimo: " + usuario.getTempoEmprestimo() + " dias");
+			    System.out.println("----------------------------------");
 			
 		}
-		System.out.println("");
-		//removendo elementos 
-		nomes.remove(3);
-		for(String n : nomes) {
-			System.out.println(n);
-		}
 		
 		
 		
-		ArrayList<Usuarios> cadastro= new ArrayList<Usuarios>();
-		Usuarios u1 = new Usuarios();
-		u1.cadastroUsuario();
 		
 	}
 
