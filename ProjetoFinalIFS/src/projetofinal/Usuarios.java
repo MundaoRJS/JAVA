@@ -1,7 +1,7 @@
 package projetofinal;
 
 import java.util.Scanner;
-public class Usuarios extends Pessoa {
+public class Usuarios extends Pessoa implements Funcionalidades {
 	private String tipoUsuario;
 	private String sigla;
 	private int tempoEmprestimo;
@@ -16,6 +16,7 @@ public class Usuarios extends Pessoa {
 		tempoDeEmprestimo();
 	}
 
+	@Override
 	public void cadastroUsuario() {
 		Scanner cad = new Scanner(System.in);
 		this.setCodId(cad.nextInt());
@@ -74,7 +75,7 @@ public class Usuarios extends Pessoa {
 	public void setTipoUsuario(String tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
 	}
-/*
+
 	public int getTempoEmprestimo() {
 		return tempoEmprestimo;
 	}
@@ -102,5 +103,54 @@ public class Usuarios extends Pessoa {
 					"dias de emprestimo"	);
 			break;		
 		}
-	}	*/		
+	}	
+
+	@Override
+	public void emprestimoLivro() {
+		// TODO Auto-generated method stub
+		Scanner emprestimo = new Scanner(System.in);
+		if ("emp".equals(emprestimo) && ("Aluno".equals(getTipoUsuario()))) {
+			
+		}
+	}
+
+	@Override
+	public void devolucaoLivro() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void consultaTdLivros() {
+		// TODO Auto-generated method stub
+		getCodId();
+		getNome();
+		
+	}
+
+	@Override
+	public void consultaDetalhada() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void consultaUsuDetalhada() {
+		// TODO Auto-generated method stub
+		getCodId();
+		getNome();
+		getTipoUsuario();
+		emprestimoLivro();
+		tempoDeEmprestimo();
+		
+	}
+
+	@Override
+	public void fecharPrograma() {
+		// TODO Auto-generated method stub
+		
+	}		
+	
+	
+
 }

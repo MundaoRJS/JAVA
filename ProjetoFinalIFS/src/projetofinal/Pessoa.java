@@ -2,11 +2,7 @@ package projetofinal;
 import java.util.ArrayList;
 public abstract class Pessoa  {
 	private int codId;
-	private String nome;
-	
-	
-	
-	
+	private String nome;	
 	
 	//geters and seters
 	
