@@ -12,8 +12,8 @@ public class Usuarios extends Pessoa {
 		this.setCodId(codId);
 		this.setTipoUsuario(tipoUsuario);
 		this.setNome(nome);
-		this.getSigla();
-		this.getTempoEmprestimo();
+		this.setSigla(tipoUsuario);
+		tempoDeEmprestimo();
 	}
 
 	public void cadastroUsuario() {
@@ -24,6 +24,30 @@ public class Usuarios extends Pessoa {
 		this.getSigla();
 		
 	}
+	
+	
+		public int tempoDeEmprestimo() {
+		    int tempo = 0;
+		    switch (getSigla()) {
+		        case "alu":
+		            tempo = 5;
+		            break;
+		        case "pos":
+		            tempo = 10;
+		            break;
+		        case "tec":
+		            tempo = 14;
+		            break;
+		        case "pro":
+		            tempo = 21;
+		            break;
+		        default:
+		            System.out.println("Sigla desconhecida: " + getSigla());
+		            break;
+		    }
+		    return tempo;
+		}
+	
 	
 	public String getSigla() {
 		return sigla;
@@ -50,7 +74,7 @@ public class Usuarios extends Pessoa {
 	public void setTipoUsuario(String tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
 	}
-
+/*
 	public int getTempoEmprestimo() {
 		return tempoEmprestimo;
 	}
@@ -78,5 +102,5 @@ public class Usuarios extends Pessoa {
 					"dias de emprestimo"	);
 			break;		
 		}
-	}			
+	}	*/		
 }

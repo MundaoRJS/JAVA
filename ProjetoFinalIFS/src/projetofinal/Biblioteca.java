@@ -25,7 +25,7 @@ public class Biblioteca {
 			    System.out.println("Tipo de Usuário: " + usuario.getTipoUsuario());
 			    System.out.println("Nome: " + usuario.getNome());
 			    System.out.println("Sigla: " + usuario.getSigla());
-			    System.out.println("Tempo de Empréstimo: " + usuario.getTempoEmprestimo() + " dias");
+			    System.out.println("Tempo de Empréstimo: " + usuario.tempoDeEmprestimo() + " dias");
 			    System.out.println("----------------------------------");
 			
 		}
