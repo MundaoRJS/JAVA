@@ -105,11 +105,12 @@ public class Usuarios extends Pessoa implements Funcionalidades {
 		}
 	}	
 
+	
 	@Override
 	public void emprestimoLivro() {
 		// TODO Auto-generated method stub
 		Scanner emprestimo = new Scanner(System.in);
-		if ("emp".equals(emprestimo) && ("Aluno".equals(getTipoUsuario()))) {
+		if ((emprestimo.equals("emp")) && ("Aluno".equals(getTipoUsuario()))) {
 			
 		}
 	}

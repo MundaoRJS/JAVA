@@ -3,6 +3,7 @@ package projetofinal;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+@SuppressWarnings("unused")
 public class Biblioteca {
 
 	public static void main(String[] args) {
