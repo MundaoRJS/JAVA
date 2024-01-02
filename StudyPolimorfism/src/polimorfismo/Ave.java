@@ -1,7 +1,7 @@
 package polimorfismo;
 
 public class Ave extends Animal {
-
+	private String corDapena;
 	@Override
 	public void locomover() {
 		// TODO Auto-generated method stub
@@ -24,4 +24,14 @@ public class Ave extends Animal {
 		System.out.println("Fazendo ninho");
 	}
 
+	public String getCorDapena() {
+		return corDapena;
+	}
+
+	public void setCorDapena(String corDapena) {
+		this.corDapena = corDapena;
+	}
+
+	
+	
 }

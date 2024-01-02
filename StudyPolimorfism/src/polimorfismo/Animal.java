@@ -1,9 +1,10 @@
 package polimorfismo;
 
 public abstract class Animal {
-	private float peso;
-	private int idade;
-	private int menbros;
+	protected float peso;
+	protected int idade;
+	protected int menbros;
+	
 	
 	public abstract void  locomover();
 	

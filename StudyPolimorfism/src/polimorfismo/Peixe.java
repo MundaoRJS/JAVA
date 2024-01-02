@@ -1,7 +1,7 @@
 package polimorfismo;
 
 public class Peixe extends Animal{
-
+	private String corDaescama;
 	@Override
 	public void locomover() {
 		// TODO Auto-generated method stub
@@ -21,6 +21,14 @@ public class Peixe extends Animal{
 	}
 	public void  soltarBolha() {
 		System.out.println("Soltando Bolhas"); 
+	}
+
+	public String getCorDaescama() {
+		return corDaescama;
+	}
+
+	public void setCorDaescama(String corDaescama) {
+		this.corDaescama = corDaescama;
 	}
 
 }

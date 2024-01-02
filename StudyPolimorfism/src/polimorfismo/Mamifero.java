@@ -1,7 +1,7 @@
 package polimorfismo;
 
 public class Mamifero extends Animal {
-	private String corPelo;
+	protected String corPelo;
 
 	@Override
 	public void locomover() {
@@ -27,6 +27,7 @@ public class Mamifero extends Animal {
 
 	public void setCorPelo(String corPelo) {
 		this.corPelo = corPelo;
+		System.out.println("Cor do pelo : "+getCorPelo());
 	}
 	
 	

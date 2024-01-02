@@ -14,6 +14,8 @@ public class VerificandoAnimais {
 		m.setMenbros(4);
 		m.locomover();
 		m.alimentar();
+		m.setCorPelo("Laranja");
+		m.emitirSom();
 		
 		System.out.println("");
 		p.setPeso(0.35f);
@@ -39,10 +41,18 @@ public class VerificandoAnimais {
 		a.emitirSom();
 		a.alimentar();
 		System.out.println("");
+		
 		Cachorro k = new Cachorro();
 		k.setCorPelo("branco");
 		k.setIdade(6);
 		k.enterrarOsso();
+		k.emitirSom();
+		k.reagir(true);
+		k.reagir("Olá");
+		k.reagir(12, 5);
+		k.reagir(15, 0.30f);
+		
+		
 		System.out.println("");
 		Canguru c = new Canguru();
 		c.alimentar();
